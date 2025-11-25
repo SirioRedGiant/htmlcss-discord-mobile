@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Presentation</title>
-    <!-- TODO: Collegare il file CSS esterno -->
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
     <!-- SEZIONE 1: Header e CTA principale -->
@@ -17,7 +17,7 @@
          Guida l'utente: Indica chiaramente qual è il passo successivo desiderato (es. iscriversi, acquistare, scaricare).
          Converte i visitatori: L'obiettivo è trasformare un semplice visitatore della pagina in un utente attivo o un cliente. -->
     <header class="header-section">
-        
+
         <!-- Contenitore per logo e navigazione. Questa è la barra di navigazione (Navigation Bar) -->
         <!-- Non è una barra di navigazione completa nel senso tradizionale, ma è l'area in alto a sinistra dove si trova il logo di Discord. Per ragioni di buona pratica e di sviluppo anche se visivamente ci sono solo il logo e le illustrazioni di sfondo, quella sezione può essere strutturata per essere il contenitore logico per futuri elementi di navigazione (come link "Login", "Scarica", "Supporto", che sono spesso presenti sui siti web desktop. -->
         <div class="discord-logo">
@@ -33,61 +33,70 @@
             <h1>GROUP CHAT THAT'S ALL FUN & GAMES</h1>
 
             <p>
-                Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.
+                Discord is great for playing games and chilling with friends, or even building a worldwide community.
+                Customize your own space to talk, play, and hang out.
             </p>
-            
+
             <!-- Contenitore per i pulsanti CTA (Call To Action - Chiamata all'azione : guardare all'inizio dell'head per saperne di più) -->
-            <!-- TODO bottone interattivo per download -->
+
+
+
             <a href="./styles.css" class="cta-button primo-cta">Download for Windows</a>
             <a href="./styles.css" class="cta-button secondo-cta">Open Discord in your browser</a>
 
-            
+
         </div>
 
         <!-- Immagine di sfondo che mostra l'interfaccia utente di Discord -->
         <!-- Questa immagine è posizionata in basso nell'header tramite CSS -->
-        <img src="./img/background.png" alt="Discord Interface Background" class="header-bg-image"> 
+        <img src="./img/background.png" alt="Discord Interface Background" class="header-bg-image">
 
-    <!-- L'elemento <main> contiene il contenuto principale e unico della pagina -->
-    <main>
-        <!-- SEZIONE 2: (MAKE YOUR GROUP CHATS MORE FUN)Funzionalità emoji, stickers & Soundboard -->
-        
-        <!-- La classe 'purple-bg' servirà nel CSS per dare lo sfondo fuxya arrotondato -->
-        <section class="feature-section purple-background">
-            <div class="feature-content">
-                
-                <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
-                <p>
-                    Use custom emoji stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.
-                </p>
-            </div>
-            
-            <div class="feature-image-container">
-                
-                <img src="./img/discord_demo.png" alt="Chat interface example" class="feature-image"> 
-            </div>
-        </section>
+        <!-- L'elemento <main> contiene il contenuto principale e unico della pagina -->
+        <main>
+            <!-- SEZIONE 2: (MAKE YOUR GROUP CHATS MORE FUN)Funzionalità emoji, stickers & Soundboard -->
 
-        <!-- SEZIONE 3: Funzionalità Video e Chat -->
-        <!-- Questa sezione è strutturata in modo identico alla precedente ma verrà invertita nel layout su desktop con il CSS -->
-        <!-- Mi riferisco a come la struttura(SEZIONE:3) verrà gestita visivamente quando la pagina web viene visualizzata su un computer desktop, rispetto a come è strutturata nel codice HTML stesso. utilizzando le regole CSS in particolare con i CSS Flexbox i due blocchi verranno visualizzati in un ordine invertito quando la larghezza dello schermo è sufficientemente grande (ad esempio su un desktop). -->
-        <section class="feature-section fuxya-bg">
-            <div class="feature-content">
-                <!-- Il testo è identico alla sezione 2 nello screenshot, ma potrebbe cambiare in un sito reale -->
-                <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
-                <p>
-                   Use custom emoji stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way. 
-                </p>
-            </div>
-            <!-- Contenitore per l'illustrazione della video/immagine chat -->
-             <div class="feature-image-container">
-                <img src="./img/streamer_demo.png" alt="Video/image chat" class="feature-image"> <!-- TODO: inserire immagine dell'interfaccia video/immagine -->
-            </div>
-        </section>
-    </main>
+            <!-- La classe 'purple-bg' servirà nel CSS per dare lo sfondo fuxya arrotondato -->
+            <section class="feature-section purple-background">
+                <div class="feature-content">
 
-    
-    <!-- TODO: Tenere conto se ci sarà bisogno di un footer-->
+                    <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
+                    <p>
+                        Use custom emoji stickers, soundboard effects and more to add your personality to your voice,
+                        video, or text chat. Set your avatar and a custom status, and write your own profile to show up
+                        in chat your way.
+                    </p>
+                </div>
+
+                <div class="feature-image-container">
+
+                    <img src="./img/discord_demo.png" alt="Chat interface example" class="feature-image">
+                </div>
+            </section>
+
+            <!-- SEZIONE 3: Funzionalità Video e Chat -->
+            <!-- Questa sezione è strutturata in modo identico alla precedente ma verrà invertita nel layout su desktop con il CSS -->
+            <!-- Mi riferisco a come la struttura(SEZIONE:3) verrà gestita visivamente quando la pagina web viene visualizzata su un computer desktop, rispetto a come è strutturata nel codice HTML stesso. utilizzando le regole CSS in particolare con i CSS Flexbox i due blocchi verranno visualizzati in un ordine invertito quando la larghezza dello schermo è sufficientemente grande (ad esempio su un desktop). -->
+            <section class="feature-section fuxya-bg">
+                <div class="feature-content">
+                    <!-- Il testo è identico alla sezione 2 nello screenshot, ma potrebbe cambiare in un sito reale -->
+                    <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
+                    <p>
+                        Use custom emoji stickers, soundboard effects and more to add your personality to your voice,
+                        video, or text chat. Set your avatar and a custom status, and write your own profile to show up
+                        in chat your way.
+                    </p>
+                </div>
+                <!-- Contenitore per l'illustrazione della video/immagine chat -->
+                <div class="feature-image-container">
+                    <img src="./img/streamer_demo.png" alt="Video/image chat" class="feature-image">
+
+                </div>
+            </section>
+        </main>
+
+
+        <!-- TODO: Tenere conto se ci sarà bisogno di un footer-->
 
 </body>
+
 </html>
