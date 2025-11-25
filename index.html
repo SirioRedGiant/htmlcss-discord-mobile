@@ -8,3 +8,83 @@
     <!-- TODO: Collegare il file CSS esterno -->
     <link rel="stylesheet" href="./styles.css">
 </head>
+<body>
+
+    <!-- SEZIONE 1: Header e CTA principale -->
+    <!-- CTA sta per Call to Action, che in italiano significa Chiamata all'Azione.
+         Nel contesto del web design e del marketing, si riferisce a un elemento grafico o testuale (solitamente un pulsante, come nel caso di Discord) progettato per indurre l'utente a compiere un'azione specifica e immediata.
+         A cosa serve una CTA?
+         Guida l'utente: Indica chiaramente qual è il passo successivo desiderato (es. iscriversi, acquistare, scaricare).
+         Converte i visitatori: L'obiettivo è trasformare un semplice visitatore della pagina in un utente attivo o un cliente. -->
+    <header class="header-section">
+        
+        <!-- Contenitore per logo e navigazione. Questa è la barra di navigazione (Navigation Bar) -->
+        <!-- Non è una barra di navigazione completa nel senso tradizionale, ma è l'area in alto a sinistra dove si trova il logo di Discord. Per ragioni di buona pratica e di sviluppo anche se visivamente ci sono solo il logo e le illustrazioni di sfondo, quella sezione può essere strutturata per essere il contenitore logico per futuri elementi di navigazione (come link "Login", "Scarica", "Supporto", che sono spesso presenti sui siti web desktop. -->
+        <div class="navigabar">
+            <!-- Stile per il logo Discord -->
+            <!-- L'attributo 'src' (source) deve puntare al percorso corretto dell'immagine del logo -->
+            <img src="" alt="Discord Logo" class="logo"> <!-- TODO: Sostituire con l'immagine reale del logo -->
+            <!-- Aggiungere link di navigazione qui se necessario (es. "Home", "Features", "Login") -->
+        </div>
+
+        <!-- Contenuto principale (Hero Content) che contiene titolo, testo e pulsanti principali -->
+        <div class="page-content">
+            <!-- <h1> rappresenta il titolo più importante della pagina (Heading Level 1) -->
+            <h1>GROUP CHAT THAT'S ALL FUN & GAMES</h1>
+
+            <p>
+                Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.
+            </p>
+            
+            <!-- Contenitore per i pulsanti CTA (Call To Action - Chiamata all'azione : guardare all'inizio dell'head per saperne di più) -->
+            
+            <!-- TODO guà posso mettere un bottone interattivo per download -->
+        </div>
+
+        <!-- Immagine di sfondo che mostra l'interfaccia utente di Discord -->
+        <!-- Questa immagine è posizionata in basso nell'header tramite CSS -->
+        <img src="header_bg.png" alt="Discord Interface Background" class="header-bg-image"> <!-- TODO: Sostituire con l'immagine di sfondo corretta -->
+    </header>
+
+    <!-- L'elemento <main> contiene il contenuto principale e unico della pagina -->
+    <main>
+        <!-- SEZIONE 2: (MAKE YOUR GROUP CHATS MORE FUN)Funzionalità emoji, stickers & Soundboard -->
+        
+        <!-- La classe 'purple-bg' servirà nel CSS per dare lo sfondo fuxya arrotondato -->
+        <section class="feature-section fuxya-background">
+            <div class="feature-content">
+                
+                <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
+                <p>
+                    
+                </p>
+            </div>
+            
+            <div class="feature-image-container">
+                <!-- TODO inserire percorso immagine -->
+                <img src="" alt="Chat interface example" class="feature-image"> 
+            </div>
+        </section>
+
+        <!-- SEZIONE 3: Funzionalità Video e Chat -->
+        <!-- Questa sezione è strutturata in modo identico alla precedente ma verrà invertita nel layout su desktop con il CSS -->
+        <section class="feature-section purple-bg">
+            <div class="feature-content">
+                <!-- Il testo è identico alla sezione 2 nello screenshot, ma potrebbe cambiare in un sito reale -->
+                <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
+                <p>
+                    
+                </p>
+            </div>
+            <!-- Contenitore per l'illustrazione della video/immagine chat -->
+             <div class="feature-image-container">
+                <img src="" alt="Video/image chat" class="feature-image"> <!-- TODO: inserire immagine dell'interfaccia video/immagine -->
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- TODO: Tenere conto se ci sarà bisogno di un footer-->
+
+</body>
+</html>
