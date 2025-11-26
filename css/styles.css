@@ -75,3 +75,23 @@ a {
 .logo {
     width: 150px; /* Imposta una dimensione fissa per il logo. */
 }
+
+/* Il blocco principale di testo e pulsanti: <div class="page-content"> */
+.page-content {
+    max-width: 700px; /* Limita la larghezza del testo su schermi grandi per una migliore leggibilità. */
+    margin: 0 auto; /* Centra il blocco all'interno dell'header. */
+    padding-top: 50px;
+}
+
+/* Il titolo H1: <h1>GROUP CHAT THAT'S ALL FUN & GAMES</h1> */
+.page-content h1 {
+    font-size: 2.5rem; /* Rende il titolo grande. */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo come nello screenshot. */
+}
+
+/* Il paragrafo P */
+.page-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
