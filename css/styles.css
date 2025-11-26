@@ -47,3 +47,20 @@ a {
     color: inherit;
     /* I link ereditano il colore del testo dal loro contenitore padre. */
 }
+
+/* ============================================== */
+/* 2. Styling della Sezione Header e Banner Principale */
+/* Corrisponde a <header class="header-section"> nell'HTML*/
+/* ============================================== */
+
+.header-section {
+    background-color: var(--section-bg-purple);
+    padding: 40px 5%;
+    /* Spaziatura interna: 40px sopra/sotto, 5% a sinistra/destra. */
+    position: relative;
+    /* IMPORTANTE: Usato come punto di riferimento per posizionare l'immagine di sfondo desktop in modo assoluto. */
+    overflow: hidden;
+    /* Nasconde parti dell'immagine di sfondo che potrebbero sbordare. */
+    text-align: center;
+    /* Centra il testo principale H1, P, e i pulsanti al centro. */
+}
