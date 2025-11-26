@@ -225,7 +225,7 @@ Schermi ad alta risoluzione: Si possono applicare stili ottimizzati per display 
 /* Modifica il layout quando lo schermo è sufficientemente largo. */
 /* ============================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 512px) {
 
     /* Quando lo schermo supera i 768px (come con tablet/desktop), cambia il layout in Flexbox. */
     .feature-section {
