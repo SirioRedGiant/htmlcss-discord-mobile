@@ -1,266 +1,92 @@
-/* ============================================== */
-/* 1. Reset e Variabili Globali */
-/* ============================================== */
+/* --- RESET --- */
+/* Regole che applicano ad un TAG per alterare il loro comportamento per tutto il sistema */
 
-/* Un "CSS Reset" è fondamentale per garantire che il layout sia coerente su tutti i browser. */
 * {
-    /* box-sizing: border-box assicura che padding e border non aggiungano larghezza extra agli elementi. */
-    box-sizing: border-box;
-    /* Rimuove i margini e i padding predefiniti del browser per tutti gli elementi. */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* per rendere il dimensionamento degli elementi più intuitivo */
 }
 
-/* Le variabili CSS (definite in :root) rendono più facile la gestione dei colori. */
-:root {
-    --discord-blue: #5865F2;
-    /* Il classico blu del logo Discord */
-    --main-bg-dark: #23272A;
-    /* Lo sfondo scuro del body */
-    --text-color: #FFFFFF;
-    /* Colore testo */
-    --section-bg-purple: #404eed;
-    /* Il viola utilizzato per le sezioni e l'header */
-}
-
-/* Stili applicati a tutto il corpo della pagina (body) */
 body {
-    background-color: var(--main-bg-dark);
-    color: var(--text-color);
-    /* il font Discord sarebbe 'Uni Sans'. */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Migliora la leggibilità del testo. */
-    line-height: 1.6;
+    font-family: "DM Sans", sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        violet,
+        blue
+    );
+    color: white;
 }
 
-/* Stili di base per le immagini e i link */
-img {
-    /* Assicura che le immagini non superino mai il loro contenitore. */
-    max-width: 100%;
+h1, h2 {
+    font-family: "Sigmar", sans-serif;
+    letter-spacing: 2px;
     
-    /* Mantiene le proporzioni originali dell'immagine. 
-    height: auto; non è necessario*/
 }
 
-a {
-    text-decoration: none;
-    /* Rimuove la sottolineatura predefinita dai link. */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a{
     color: inherit;
-    /* I link ereditano il colore del testo dal loro contenitore padre. */
+    text-decoration: none;
 }
 
-/* ============================================== */
-/* 2. Styling della Sezione Header e Banner Principale */
-/* Corrisponde a <header class="header-section"> nell'HTML*/
-/* ============================================== */
 
-.header-section {
-    background-color: var(--section-bg-purple);
-    padding: 40px 5%;
-    /* Spaziatura interna: 40px sopra/sotto, 5% a sinistra/destra. */
-    position: relative;
-    /* IMPORTANTE: Usato come punto di riferimento per posizionare l'immagine di sfondo desktop in modo assoluto. */
-    overflow: hidden;
-    /* Nasconde parti dell'immagine di sfondo che potrebbero sbordare. */
-    text-align: center;
-    /* Centra il testo principale H1, P, e i pulsanti al centro. */
-}
-
-/* Contenitore per il logo, definito in <div class="discord-logo"> */
-.discord-logo {
-    text-align: left;
-    /* Riporta il logo a sinistra, annullando il text-align: center del genitore. */
-    margin-bottom: 20px;
-}
-
-/* L'immagine del logo <img src="./img/banner.png" alt="Discord Logo" class="logo"> */
-.logo {
-    width: 150px;
-    /* Imposta una dimensione fissa per il logo. */
-}
-
-/* Il blocco principale di testo e pulsanti: <div class="page-content"> */
-.page-content {
-    max-width: 700px;
-    /* Limita la larghezza del testo su schermi grandi per una migliore leggibilità. */
-    margin: 0 auto;
-    /* Centra il blocco all'interno dell'header. */
-    padding-top: 50px;
-}
-
-/* Il titolo H1: <h1>GROUP CHAT THAT'S ALL FUN & GAMES</h1> */
-.page-content h1 {
-    font-size: 2.5rem;
-    /* Rende il titolo grande. */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    /* Trasforma il testo in maiuscolo come nello screenshot. */
-}
-
-/* Il paragrafo P */
-.page-content p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-/* L'immagine di sfondo blu scuro(discord-theme): <img src="./img/background.png" ... class="header-bg-image"> */
-.header-bg-image {
-    position: absolute;
-    /* Rimosso dal flusso normale del documento. */
-    bottom: 0;
-    /* Allinea al fondo dell'header-section (grazie a position: relative sul genitore). */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Trucco per centrare perfettamente un elemento posizionato. */
-    width: 90%;
-    /* Occupa il 90% della larghezza. */
-    max-width: 1000px;
-    pointer-events: none;
-    /* Assicura che l'utente non possa cliccare o selezionare questa immagine di sfondo. */
-}
-
-/* ============================================== */
-/* 3. Styling dei Pulsanti (CTA Buttons) */
-/* Corrisponde agli <a> tag con classe .cta-button nell'HTML */
-/* ============================================== */
-
-.cta-button {
-    display: inline-block;
-    /* Permette di impostare padding e margini su elementi che di base sono inline. */
-    padding: 15px 30px;
+/* UTILITIES */
+/* Regole che permetto ad un elemento di interagire a prescindere dal luogo in cui si trova */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    border: none;
+    padding: 12px 12px;
     border-radius: 28px;
-    /* Crea i bordi arrotondati (pill-shape). */
-    font-weight: bold;
-    margin: 10px;
-    /* Spazio tra i due pulsanti. */
-    transition: background-color 0.3s ease;
-    /* Transizione fluida quando si passa il mouse. */
+    font-size: 1rem;
+    
 }
 
-/* Il primo pulsante: <a ... class="primo-cta"> */
-.primo-cta {
-    background-color: var(--text-color);
-    /* Sfondo bianco. */
-    color: var(--main-bg-dark);
-    /* Testo scuro. */
+.btn.btn-primary{
+    background-color: white;
+    color: black;
 }
 
-.primo-cta:hover {
-    background-color: #f2f2f2;
-    /* Effetto al passaggio del mouse (hover). */
+.btn.btn-secondary{
+    background-color: #5865f2;
+    color: white;
 }
 
-/* Il secondo pulsante: <a ... class="secondo-cta"> */
-.secondo-cta {
-    background-color: var(--main-bg-dark);
-    /* Sfondo scuro. */
-    color: var(--text-color);
-    /* Testo bianco. */
+.card {
+    margin: 2rem auto;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 10px;
 }
 
-.secondo-cta:hover {
-    background-color: #383c41;
-    /* Effetto al passaggio del mouse (hover). */
+.card img{
+    border-radius: 10px;
 }
 
-/* ============================================== */
-/* 4. Styling delle Sezioni di Contenuto (Feature Sections) */
-/* Corrisponde ai <section> all'interno di <main> nell'HTML */
-/* ============================================== */
-
-
-main {
-    padding: 60px 7%;
-    /* Spazio intorno alle sezioni viola. (5~9%)*/
+/*LAYOUT*/
+/* Regole che sono proprie dell'incasellamento e della spaziatura dei diversi elementi, sono imprescindibili dal luogo in cui si trovano(non possono essere usate al di fuori del luogo in cui si trovano) */
+.main-page{
+    padding: 2rem;
 }
 
-.feature-section {
-    padding: 40px;
-    border-radius: 8px;
-    /* Angoli arrotondati per i blocchi viola. */
-    margin-bottom: 50px;
-    /* Spazio tra la prima e la seconda sezione viola. */
-    /* Di base su mobile saranno blocchi verticali (layout a colonna standard). */
+.main-header {
+    text-align: center;
+    padding: 2rem;
 }
 
-/* La prima sezione ha la classe .purple-background */
-.purple-background {
-    background-color: var(--section-bg-purple);
+.main-header > h1 {
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
 }
 
-/* La seconda sezione ha la classe .fucsia-bg */
-.fucsia-bg {
-    background-color: var(--section-bg-purple);
-    /* Nello screenshot hanno lo stesso colore. */
-}
-
-.feature-content h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.feature-content p {
-    margin-bottom: 20px;
-}
-
-/* Le immagini delle icone 3D (occhi e discord-cubo) */
-.discord-3d-icon {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
-/* Le media queries sono una funzionalità di CSS che permette di definire regole di stile diverse in base alle caratteristiche del dispositivo, come la larghezza dello schermo, l'altezza o l'orientamento. Sono fondamentali per il responsive design, creando siti web che si adattano automaticamente alle dimensioni dello schermo dell'utente, garantendo una visualizzazione ottimale su dispositivi diversi, dai telefoni ai computer desktop. 
-Come funzionano
-Le media queries utilizzano la keyword @media per iniziare una regola condizionale.
-Possono specificare un tipo di media (come screen per gli schermi) e "media features" come max-width per la larghezza massima dello schermo.
-Gli stili CSS inclusi nella query vengono applicati solo se le condizioni specificate sono vere. 
-Esempi di utilizzo
-Layout responsive: Permettono di cambiare la disposizione degli elementi, come far sì che un layout a più colonne diventi a una sola colonna su schermi piccoli.
-Dimensioni dei font: Si può aumentare la dimensione del testo su schermi più grandi per una migliore leggibilità.
-Stampa: È possibile definire stili specifici per la stampa, ad esempio nascondendo alcuni elementi o cambiando il layout.
-Schermi ad alta risoluzione: Si possono applicare stili ottimizzati per display con alta densità di pixel. */
-
-/* ============================================== */
-/* 5. Media Queries per Layout Desktop (Responsive Design) */
-/* Modifica il layout quando lo schermo è sufficientemente largo. */
-/* ============================================== */
-
-@media (min-width: 512px) {
-
-    /* Quando lo schermo supera i 768px (come con tablet/desktop), cambia il layout in Flexbox. */
-    .feature-section {
-        display: flex;
-        /* Attiva il layout flessibile (mette gli elementi uno accanto all'altro). */
-        align-items: center;
-        /* Allinea verticalmente (centra) il testo e l'immagine. */
-        gap: 40px;
-        /* Spazio tra il blocco testo e il blocco immagine. */
-        justify-content: space-between;
-        /*ha la funzione di distribuire uniformemente gli elementi al suo interno lungo l'asse principale del contenitore, massimizzando lo spazio tra di essi.*/
-    }
-
-    /* ----- justify-content ----*/
-    /*Asse principale: L'asse lungo cui justify-content agisce dipende dalla direzione del flex container (determinata dalla proprietà flex-direction, che di default è row, ovvero orizzontale).
-Distribuzione:
-Il primo elemento viene posizionato all'inizio del contenitore.
-L'ultimo elemento viene posizionato alla fine del contenitore.
-Gli spazi vuoti rimanenti vengono divisi in modo uguale e inseriti tra gli elementi, garantendo che lo spazio tra ogni coppia di elementi adiacenti sia identico. 
-In sintesi, "spinge" gli elementi più esterni contro i bordi del contenitore e distribuisce uniformemente lo spazio rimanente al centro. */
-
-
-
-    .feature-content,
-    .feature-image-container {
-        flex: 1;
-        /* Distribuisce lo spazio disponibile equamente tra i due contenitori. */
-    }
-
-    /* La magia dell'inversione: */
-    /* Il commento nel tuo HTML diceva: "Questa sezione [...] verrà invertita nel layout su desktop con il CSS" */
-    /* Usiamo flex-direction: row-reverse per fare esattamente questo per la seconda sezione (fucsia-bg). */
-    .fucsia-bg {
-        flex-direction: row-reverse;
-        /* Inverte l'ordine visivo: l'immagine va a sinistra, il testo a destra. */
-    }
-}

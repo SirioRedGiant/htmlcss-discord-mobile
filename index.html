@@ -5,54 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Presentation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- FONTS: DM Sans e Sigmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sigmar&display=swap"
+        rel="stylesheet">
+    <!-- CUSTOM FONT -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
+    <header>
+        <img src="./img/banner.png" alt="Main Discord Banner" class="main-banner" />
+    </header>
 
-    <!-- SEZIONE 1: Header e CTA principale -->
-    <!-- CTA sta per Call to Action, che in italiano significa Chiamata all'Azione.
-         Nel contesto del web design e del marketing, si riferisce a un elemento grafico o testuale (solitamente un pulsante, come nel caso di Discord) progettato per indurre l'utente a compiere un'azione specifica e immediata.
-         A cosa serve una CTA?
-         Guida l'utente: Indica chiaramente qual è il passo successivo desiderato (es. iscriversi, acquistare, scaricare).
-         Converte i visitatori: L'obiettivo è trasformare un semplice visitatore della pagina in un utente attivo o un cliente. -->
-    <header class="header-section">
-
-        <!-- Contenitore per logo e navigazione. Questa è la barra di navigazione (Navigation Bar) -->
-        <!-- Non è una barra di navigazione completa nel senso tradizionale, ma è l'area in alto a sinistra dove si trova il logo di Discord. Per ragioni di buona pratica e di sviluppo anche se visivamente ci sono solo il logo e le illustrazioni di sfondo, quella sezione può essere strutturata per essere il contenitore logico per futuri elementi di navigazione (come link "Login", "Scarica", "Supporto", che sono spesso presenti sui siti web desktop. -->
-        <div class="discord-logo">
-            <!-- Stile per il logo Discord -->
-            <!-- L'attributo 'src' (source) deve puntare al percorso corretto dell'immagine del logo -->
-            <img src="./img/banner.png" alt="Discord Logo" class="logo">
-            <!-- Aggiungere link di navigazione qui se necessario (es. "Home", "Features", "Login") -->
-        </div>
-
-        <!-- Contenuto principale che contiene titolo, testo e pulsanti -->
-        <div class="page-content">
-            <!-- <h1> rappresenta il titolo più importante della pagina (Heading Level 1) -->
-            <h1>GROUP CHAT THAT'S ALL FUN & GAMES</h1>
+    <main class="main-page">
+        <header class="main-header">
+            <!-- Contenuto principale che contiene titolo, testo e pulsanti -->            
+            <h1>
+                GROUP CHAT <br />
+                THAT'S ALL FUN &<br />
+                GAMES
+            </h1>
 
             <p>
-                Discord is great for playing games and chilling with friends, or even building a worldwide community.
+                Discord is great for playing games and chilling with friends, or even building a worldwide
+                community.
                 Customize your own space to talk, play, and hang out.
             </p>
 
             <!-- Contenitore per i pulsanti CTA (Call To Action - Chiamata all'azione : guardare all'inizio dell'head per saperne di più) -->
+            <button class="btn btn-primary">Download for Windows
+            </button>
+            <a class="btn btn-secondary" href="#">Open Discord in your browser
+            </a>
+        </header>
 
+        <!-- CARDS SECTION -->
+        <section>
 
-            <!-- ho usato "#" come placeholder in attesa di un link funzionante -->
-            <a href="#" class="cta-button primo-cta">Download for Windows</a>
-            <a href="#" class="cta-button secondo-cta">Open Discord in your browser</a>
+            <!-- CARD 1 -->
+            <div class="card">
+                <h2>
+                    MAKE YOUR<br />
+                    GROUP CHATS<br />
+                    MORE FUN
+                </h2>
+                <p>
+                    Use custom emoji stickers, soundboard effects and more to add your personality to your
+                    voice,
+                    video, or text chat. Set your avatar and a custom status, and write your own profile to show
+                    up
+                    in chat your way.
+                </p>
+                <figure>
+                    <img src="./img/discord_demo.png" alt="Discord demo">
+                </figure>                
+            </div>
 
+            <!-- CARD 2 -->
+            <div class="card">
+                <h2>
+                    MAKE YOUR<br />
+                    GROUP CHATS<br />
+                    MORE FUN
+                </h2>
+                <p>
+                    Use custom emoji stickers, soundboard effects and more to add your personality to your
+                    voice,
+                    video, or text chat. Set your avatar and a custom status, and write your own profile to show
+                    up
+                    in chat your way.
+                </p>
+                <figure>
+                    <img src="./img/streamer_demo.png" alt="Streamer demo">
+                </figure>                
+            </div>
+            
+            <img src="./img/background.png" alt="Discord Interface Background" class="header-bg-image">
 
-        </div>
-
-        <!-- Immagine di sfondo che mostra l'interfaccia utente di Discord -->
-        <!-- Questa immagine è posizionata in basso nell'header tramite CSS -->
-        <img src="./img/background.png" alt="Discord Interface Background" class="header-bg-image">
-
-        <!-- L'elemento <main> contiene il contenuto principale e unico della pagina -->
-        <main>
+            <!-- L'elemento <main> contiene il contenuto principale e unico della pagina -->
+            <section></section>
             <!-- SEZIONE 2: (MAKE YOUR GROUP CHATS MORE FUN)Funzionalità emoji, stickers & Soundboard -->
             <!-- Inserimento della nuova icona 3D -->
 
@@ -60,12 +97,7 @@
             <section class="feature-section purple-background">
                 <div class="feature-content">
                     <img src="./img/eyes.png" alt="Discord 3D Icon" class="discord-3d-icon">
-                    <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
-                    <p>
-                        Use custom emoji stickers, soundboard effects and more to add your personality to your voice,
-                        video, or text chat. Set your avatar and a custom status, and write your own profile to show up
-                        in chat your way.
-                    </p>
+
                 </div>
 
                 <div class="feature-image-container">
@@ -77,16 +109,11 @@
             <!-- SEZIONE 3: Funzionalità Video e Chat -->
             <!-- Questa sezione è strutturata in modo identico alla precedente ma verrà invertita nel layout su desktop con il CSS -->
             <!-- Mi riferisco a come la struttura(SEZIONE:3) verrà gestita visivamente quando la pagina web viene visualizzata su un computer desktop, rispetto a come è strutturata nel codice HTML stesso. utilizzando le regole CSS in particolare con i CSS Flexbox i due blocchi verranno visualizzati in un ordine invertito quando la larghezza dello schermo è sufficientemente grande (ad esempio su un desktop). -->
-            <section class="feature-section fucsia-bg">
+            <section class="feature-section fuxya-bg">
                 <div class="feature-content">
                     <img src="./img/discord_cube.png" alt="Discord 3D Icon" class="discord-3d-icon">
                     <!-- Il testo è identico alla sezione 2 nello screenshot, ma potrebbe cambiare in un sito reale -->
-                    <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
-                    <p>
-                        Use custom emoji stickers, soundboard effects and more to add your personality to your voice,
-                        video, or text chat. Set your avatar and a custom status, and write your own profile to show up
-                        in chat your way.
-                    </p>
+
                 </div>
                 <!-- Contenitore per l'illustrazione della video/immagine chat -->
                 <div class="feature-image-container">
@@ -94,10 +121,12 @@
 
                 </div>
             </section>
-        </main>
+        </section>
 
+    </main>
 
-        <!-- TODO: Tenere conto se ci sarà bisogno di un footer-->
+    <!-- TODO: Tenere conto se ci sarà bisogno di un footer-->
+
 
 </body>
 
