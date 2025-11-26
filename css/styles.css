@@ -13,10 +13,14 @@
 
 /* Le variabili CSS (definite in :root) rendono più facile la gestione dei colori. */
 :root {
-    --discord-blue: #5865F2; /* Il classico blu del logo Discord */
-    --main-bg-dark: #23272A; /* Lo sfondo scuro del body */
-    --text-color: #FFFFFF; /* Colore testo */
-    --section-bg-purple: #404eed; /* Il viola utilizzato per le sezioni e l'header */
+    --discord-blue: #5865F2;
+    /* Il classico blu del logo Discord */
+    --main-bg-dark: #23272A;
+    /* Lo sfondo scuro del body */
+    --text-color: #FFFFFF;
+    /* Colore testo */
+    --section-bg-purple: #404eed;
+    /* Il viola utilizzato per le sezioni e l'header */
 }
 
 /* Stili applicati a tutto il corpo della pagina (body) */
@@ -27,4 +31,19 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /* Migliora la leggibilità del testo. */
     line-height: 1.6;
+}
+
+/* Stili di base per le immagini e i link */
+img {
+    /* Assicura che le immagini non superino mai il loro contenitore. */
+    max-width: 100%;
+    height: auto;
+    /* Mantiene le proporzioni originali dell'immagine. */
+}
+
+a {
+    text-decoration: none;
+    /* Rimuove la sottolineatura predefinita dai link. */
+    color: inherit;
+    /* I link ereditano il colore del testo dal loro contenitore padre. */
 }
