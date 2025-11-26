@@ -104,5 +104,5 @@ a {
     transform: translateX(-50%); /* Trucco per centrare perfettamente un elemento posizionato. */
     width: 90%; /* Occupa il 90% della larghezza. */
     max-width: 1000px;
-    pointer-events: none; /* Assicura che l'utente non possa cliccare o selezionare questa immagine di sfondo. */
+    
 }
