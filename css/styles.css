@@ -64,3 +64,14 @@ a {
     text-align: center;
     /* Centra il testo principale H1, P, e i pulsanti al centro. */
 }
+
+/* Contenitore per il logo, definito in <div class="discord-logo"> */
+.discord-logo {
+    text-align: left; /* Riporta il logo a sinistra, annullando il text-align: center del genitore. */
+    margin-bottom: 20px;
+}
+
+/* L'immagine del logo <img src="./img/banner.png" alt="Discord Logo" class="logo"> */
+.logo {
+    width: 150px; /* Imposta una dimensione fissa per il logo. */
+}
