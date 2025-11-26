@@ -37,8 +37,9 @@ body {
 img {
     /* Assicura che le immagini non superino mai il loro contenitore. */
     max-width: 100%;
-    height: auto;
-    /* Mantiene le proporzioni originali dell'immagine. */
+    
+    /* Mantiene le proporzioni originali dell'immagine. 
+    height: auto; non è necessario*/
 }
 
 a {
