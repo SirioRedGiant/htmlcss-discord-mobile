@@ -188,8 +188,8 @@ main {
     background-color: var(--section-bg-purple);
 }
 
-/* La seconda sezione ha la classe .fuxya-bg */
-.fuxya-bg {
+/* La seconda sezione ha la classe .fucsia-bg */
+.fucsia-bg {
     background-color: var(--section-bg-purple);
     /* Nello screenshot hanno lo stesso colore. */
 }
@@ -258,8 +258,8 @@ In sintesi, "spinge" gli elementi più esterni contro i bordi del contenitore e 
 
     /* La magia dell'inversione: */
     /* Il commento nel tuo HTML diceva: "Questa sezione [...] verrà invertita nel layout su desktop con il CSS" */
-    /* Usiamo flex-direction: row-reverse per fare esattamente questo per la seconda sezione (fuxya-bg). */
-    .fuxya-bg {
+    /* Usiamo flex-direction: row-reverse per fare esattamente questo per la seconda sezione (fucsia-bg). */
+    .fucsia-bg {
         flex-direction: row-reverse;
         /* Inverte l'ordine visivo: l'immagine va a sinistra, il testo a destra. */
     }
