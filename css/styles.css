@@ -95,3 +95,14 @@ a {
     font-size: 1.1rem;
     margin-bottom: 30px;
 }
+
+/* L'immagine di sfondo blu scuro(discord-theme): <img src="./img/background.png" ... class="header-bg-image"> */
+.header-bg-image {
+    position: absolute; /* Rimosso dal flusso normale del documento. */
+    bottom: 0; /* Allinea al fondo dell'header-section (grazie a position: relative sul genitore). */
+    left: 50%;
+    transform: translateX(-50%); /* Trucco per centrare perfettamente un elemento posizionato. */
+    width: 90%; /* Occupa il 90% della larghezza. */
+    max-width: 1000px;
+    pointer-events: none; /* Assicura che l'utente non possa cliccare o selezionare questa immagine di sfondo. */
+}
