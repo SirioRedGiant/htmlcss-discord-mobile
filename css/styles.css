@@ -1,7 +1,30 @@
-/* --- RESET --- */
+/* ============================================== */
+/* 1. Reset e Variabili Globali */
+/* ============================================== */
+
+/* Un "CSS Reset" è fondamentale per garantire che il layout sia coerente su tutti i browser. */
 * {
+    /* box-sizing: border-box assicura che padding e border non aggiungano larghezza extra agli elementi. */
+    box-sizing: border-box;
+    /* Rimuove i margini e i padding predefiniti del browser per tutti gli elementi. */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* per rendere il dimensionamento degli elementi più intuitivo */
+}
+
+/* Le variabili CSS (definite in :root) rendono più facile la gestione dei colori. */
+:root {
+    --discord-blue: #5865F2; /* Il classico blu del logo Discord */
+    --main-bg-dark: #23272A; /* Lo sfondo scuro del body */
+    --text-color: #FFFFFF; /* Colore testo */
+    --section-bg-purple: #404eed; /* Il viola utilizzato per le sezioni e l'header */
+}
+
+/* Stili applicati a tutto il corpo della pagina (body) */
+body {
+    background-color: var(--main-bg-dark);
+    color: var(--text-color);
+    /* il font Discord sarebbe 'Uni Sans'. */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Migliora la leggibilità del testo. */
+    line-height: 1.6;
 }
