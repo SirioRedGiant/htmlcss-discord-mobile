@@ -104,5 +104,77 @@ a {
     transform: translateX(-50%); /* Trucco per centrare perfettamente un elemento posizionato. */
     width: 90%; /* Occupa il 90% della larghezza. */
     max-width: 1000px;
-    
+    pointer-events: none; /* Assicura che l'utente non possa cliccare o selezionare questa immagine di sfondo. */
 }
+
+/* ============================================== */
+/* 3. Styling dei Pulsanti (CTA Buttons) */
+/* Corrisponde agli <a> tag con classe .cta-button nell'HTML */
+/* ============================================== */
+
+.cta-button {
+    display: inline-block; /* Permette di impostare padding e margini su elementi che di base sono inline. */
+    padding: 15px 30px;
+    border-radius: 28px; /* Crea i bordi arrotondati (pill-shape). */
+    font-weight: bold;
+    margin: 10px; /* Spazio tra i due pulsanti. */
+    transition: background-color 0.3s ease; /* Transizione fluida quando si passa il mouse. */
+}
+
+/* Il primo pulsante: <a ... class="primo-cta"> */
+.primo-cta {
+    background-color: var(--text-color); /* Sfondo bianco. */
+    color: var(--main-bg-dark); /* Testo scuro. */
+}
+
+.primo-cta:hover {
+    background-color: #f2f2f2; /* Effetto al passaggio del mouse (hover). */
+}
+
+/* Il secondo pulsante: <a ... class="secondo-cta"> */
+.secondo-cta {
+    background-color: var(--main-bg-dark); /* Sfondo scuro. */
+    color: var(--text-color); /* Testo bianco. */
+}
+
+.secondo-cta:hover {
+     background-color: #383c41; /* Effetto al passaggio del mouse (hover). */
+}
+
+/* ============================================== */
+/* 4. Styling delle Sezioni di Contenuto (Feature Sections) */
+/* Corrisponde ai <section> all'interno di <main> nell'HTML */
+/* ============================================== */
+
+
+main {
+    padding: 60px 7%; /* Spazio intorno alle sezioni viola. (5~9%)*/
+}
+
+.feature-section {
+    padding: 40px;
+    border-radius: 8px; /* Angoli arrotondati per i blocchi viola. */
+    margin-bottom: 50px; /* Spazio tra la prima e la seconda sezione viola. */
+    /* Di base su mobile saranno blocchi verticali (layout a colonna standard). */
+}
+
+/* La prima sezione ha la classe .purple-background */
+.purple-background {
+    background-color: var(--section-bg-purple);
+}
+
+/* La seconda sezione ha la classe .fuxya-bg */
+.fuxya-bg {
+    background-color: var(--section-bg-purple); /* Nello screenshot hanno lo stesso colore. */
+}
+
+.feature-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.feature-content p {
+    margin-bottom: 20px;
+}
+
